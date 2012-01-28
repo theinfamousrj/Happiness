@@ -16,6 +16,7 @@
 		810DCDD814D474B900AC034E /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810DCDD614D474B900AC034E /* MainStoryboard_iPhone.storyboard */; };
 		810DCDDB14D474B900AC034E /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 810DCDD914D474B900AC034E /* MainStoryboard_iPad.storyboard */; };
 		810DCDDE14D474B900AC034E /* HappinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DCDDD14D474B900AC034E /* HappinessViewController.m */; };
+		810DCDE614D4757900AC034E /* FaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 810DCDE514D4757900AC034E /* FaceView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +24,18 @@
 		810DCDC414D474B900AC034E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		810DCDC614D474B900AC034E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		810DCDC814D474B900AC034E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		810DCDCC14D474B900AC034E /* Happiness-Info.plist */ = {isa = PBXFileReference; path = "Happiness-Info.plist"; sourceTree = "<group>"; };
+		810DCDCC14D474B900AC034E /* Happiness-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Happiness-Info.plist"; sourceTree = "<group>"; };
 		810DCDCE14D474B900AC034E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		810DCDD014D474B900AC034E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		810DCDD214D474B900AC034E /* Happiness-Prefix.pch */ = {isa = PBXFileReference; path = "Happiness-Prefix.pch"; sourceTree = "<group>"; };
-		810DCDD314D474B900AC034E /* HappinessAppDelegate.h */ = {isa = PBXFileReference; path = HappinessAppDelegate.h; sourceTree = "<group>"; };
+		810DCDD214D474B900AC034E /* Happiness-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Happiness-Prefix.pch"; sourceTree = "<group>"; };
+		810DCDD314D474B900AC034E /* HappinessAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HappinessAppDelegate.h; sourceTree = "<group>"; };
 		810DCDD414D474B900AC034E /* HappinessAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappinessAppDelegate.m; sourceTree = "<group>"; };
 		810DCDD714D474B900AC034E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		810DCDDA14D474B900AC034E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		810DCDDC14D474B900AC034E /* HappinessViewController.h */ = {isa = PBXFileReference; path = HappinessViewController.h; sourceTree = "<group>"; };
+		810DCDDC14D474B900AC034E /* HappinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HappinessViewController.h; sourceTree = "<group>"; };
 		810DCDDD14D474B900AC034E /* HappinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappinessViewController.m; sourceTree = "<group>"; };
+		810DCDE414D4757900AC034E /* FaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceView.h; sourceTree = "<group>"; };
+		810DCDE514D4757900AC034E /* FaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaceView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				810DCDD914D474B900AC034E /* MainStoryboard_iPad.storyboard */,
 				810DCDDC14D474B900AC034E /* HappinessViewController.h */,
 				810DCDDD14D474B900AC034E /* HappinessViewController.m */,
+				810DCDE414D4757900AC034E /* FaceView.h */,
+				810DCDE514D4757900AC034E /* FaceView.m */,
 				810DCDCB14D474B900AC034E /* Supporting Files */,
 			);
 			path = Happiness;
@@ -167,6 +172,7 @@
 				810DCDD114D474B900AC034E /* main.m in Sources */,
 				810DCDD514D474B900AC034E /* HappinessAppDelegate.m in Sources */,
 				810DCDDE14D474B900AC034E /* HappinessViewController.m in Sources */,
+				810DCDE614D4757900AC034E /* FaceView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
