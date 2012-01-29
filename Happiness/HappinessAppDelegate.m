@@ -3,7 +3,7 @@
 //  Happiness
 //
 //  Created by theinfamousrj on 1/28/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 omfgp.com. All rights reserved.
 //
 
 #import "HappinessAppDelegate.h"
@@ -11,6 +11,8 @@
 @implementation HappinessAppDelegate
 
 @synthesize window = _window;
+
+// Standard delegate code below, nothing changed.
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

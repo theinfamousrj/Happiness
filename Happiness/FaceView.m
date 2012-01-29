@@ -3,7 +3,7 @@
 //  Happiness
 //
 //  Created by theinfamousrj on 1/28/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 omfgp.com. All rights reserved.
 //
 
 #import "FaceView.h"
@@ -24,6 +24,10 @@
 #define MOUTH_V 0.40
 #define MOUTH_SMILE 0.25
 
+/*
+ Getter override for scale
+ Scale is either DEFAULT_SCALE or something input by the user
+*/
 - (CGFloat)scale
 {
     if (!_scale) {
@@ -33,6 +37,10 @@
     }
 }
 
+/*
+ Setter override for scale
+ If the scale changes, it calls for a redraw
+*/
 - (void)setScale:(CGFloat)scale
 {
     if (scale != _scale) {
@@ -41,6 +49,9 @@
     }
 }
 
+/*
+ Gesture recognition for a pinch
+*/
 - (void)pinch:(UIPinchGestureRecognizer *)gesture
 {
     if ((gesture.state == UIGestureRecognizerStateChanged) || (gesture.state == UIGestureRecognizerStateEnded)) {
@@ -49,16 +60,26 @@
     }
 }
 
+/*
+ Setup method for the content mode
+ Could have been set in the storyboard inspector
+*/
 - (void)setup
 {
     self.contentMode = UIViewContentModeRedraw;
 }
 
+/*
+ Runs the setup when the storyboard is awoken
+*/
 - (void) awakeFromNib
 {
     [self setup];
 }
 
+/*
+ Standard init with a setup call
+*/
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -68,6 +89,9 @@
     return self;
 }
 
+/*
+ Draws and strokes a circle path with a center at p and a given radius
+*/
 - (void)drawCircleAtPoint:(CGPoint)p
                withRadius:(CGFloat)radius
                 inContext:(CGContextRef)context
@@ -79,7 +103,11 @@
     UIGraphicsPopContext();
 }
 
-
+/*
+ Standard drawRect method with added functionality
+ Draws two circles for eyes, a circle for the head
+ and a bezier for the mouth
+*/
 - (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();

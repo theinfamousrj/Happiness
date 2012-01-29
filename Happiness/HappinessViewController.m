@@ -3,7 +3,7 @@
 //  Happiness
 //
 //  Created by theinfamousrj on 1/28/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 omfgp.com. All rights reserved.
 //
 
 #import "HappinessViewController.h"
@@ -18,11 +18,22 @@
 @synthesize happiness = _happiness;
 @synthesize faceView = _faceView;
 
-- (void)setHappiness:(int)happiness {
+
+/* 
+ Setter override for happiness
+ Also calls a display redraw
+*/
+- (void)setHappiness:(int)happiness
+{
     _happiness = happiness;
     [self.faceView setNeedsDisplay];
 }
 
+/* 
+ Setter override for faceView
+ Adds two gesture recognizers: pinch & pan
+ Adds a faceView data source: dataSource
+*/
 - (void)setFaceView:(FaceView *)faceView
 {
     _faceView = faceView;
@@ -31,6 +42,9 @@
     self.faceView.dataSource = self;
 }
 
+/*
+ Implements recognition for the pan gesture
+*/
 - (void)handleHappinessGesture:(UIPanGestureRecognizer *)gesture
 {
     if ((gesture.state == UIGestureRecognizerStateChanged) || (gesture.state == UIGestureRecognizerStateEnded)) {
@@ -40,12 +54,19 @@
     }
 }
 
+/*
+ Returns the modified happiness in units the faceView can understand
+*/
 - (float)smileForFaceView:(FaceView *)sender
 {
     return (self.happiness - 50) / 25.0;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+/*
+ Implementation of autorotation
+*/
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
     return YES;
 }
 
